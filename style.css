@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+html {
+  font-size: 62.5%;
+}
+body{
+  font-size: 1.6rem;
+}
+body, html{
+  height: 100%;
+}
+
+header {
+  background: linear-gradient( 95deg, #05F2F2, #6A44F2);
+
+}
+header .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  width: 90%;
+  margin: auto;
+  max-width: 1024px;
+  
+}
+.logo h1{
+  color: aliceblue;
+}
+.menuOpitions ul{
+  display: flex;
+}
+.menuOpitions ul li{
+  list-style: none;
+}
+.menuOpitions ul li a{
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 2.1rem;
+  margin-left: 50px;
+  padding: 3px 5px;
+  transition:  0.2s ease-in;
+}
+.menuOpitions ul li a:hover{
+  background: rgba(0, 0, 0, 0.164);
+  border-radius: 4px;
+  
+}
+@media (max-width: 930px){
+  html{
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 800px){
+  nav{
+    display: none;
+  }
+  .one, .two, .three{
+    background-color: #fff;
+    height: 5px;
+    width: 100%;
+    margin: 6px auto;
+    transition: 0.4s ease;
+  }
+  .menu-burguer{
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+
+  }
+  .menu.on{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient( 150deg, #05F2F2, #6A44F2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .menu.on nav{
+    display: block;
+  }
+  .menu.on .menu-burguer{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+  .menu.on .menu-burguer .one{
+    transform: rotate(45deg ) translate(7px, 7px);
+  }
+  .menu.on .menu-burguer .two{
+    opacity: 0;
+
+  }
+  .menu.on .menu-burguer .three{
+    transform: rotate(-45deg ) translate(9px, -9px);
+  }
+  .menu.on .menuOpitions ul{
+    display: block;
+    text-align: center;
+  
+  }
+  .menu.on .menuOpitions ul li a{
+    margin-left: 0;
+    transition: 0.3ms ;
+    font-size: 2.8rem;
+    line-height: 8rem;
+  }
+  
+}
